@@ -9,7 +9,7 @@ get_header(); ?>
 
 <header class="hs-main-header">
 	<div class="hs-container">
-		<h1 class="hs-main-title"><?php printf( esc_html__( 'Search Results for: %s', 'hashone' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+		<h1 class="hs-main-title"><?php printf( esc_html__( '查询结果: %s', 'hashone' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 		<?php hashone_breadcrumbs(); ?>
 	</div>
 </header><!-- .hs-main-header -->
@@ -34,8 +34,8 @@ get_header(); ?>
 			<?php endwhile; ?>
 
 			<?php the_posts_pagination(array(
-								    'prev_text' => __( 'Prev', 'hashone' ),
-								    'next_text' => __( 'Next', 'hashone' ),
+								    'prev_text' => __( '上一页', 'hashone' ),
+								    'next_text' => __( '下一页', 'hashone' ),
 								)); ?>
 
 			<?php else : ?>

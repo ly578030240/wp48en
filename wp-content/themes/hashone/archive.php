@@ -39,8 +39,8 @@ get_header(); ?>
 			<?php endwhile; ?>
 
 			<?php the_posts_pagination(array(
-								    'prev_text' => __( 'Prev', 'hashone' ),
-								    'next_text' => __( 'Next', 'hashone' ),
+								    'prev_text' => __( '前一页', 'hashone' ),
+								    'next_text' => __( '后一页', 'hashone' ),
 								)); ?>
 
 		<?php else : ?>

@@ -21,7 +21,7 @@ function hashone_posted_on() {
 	);
 
 	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'hashone' ),
+		esc_html_x( 'by %s', '作者', 'hashone' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
@@ -29,11 +29,11 @@ function hashone_posted_on() {
 
 
 	if ( $comment_count == 0 ) {
-		$comments = __('No <span>Comments</span>', 'hashone' );
+		$comments = __('No <span>评论</span>', 'hashone' );
 	} elseif ( $comment_count > 1 ) {
-		$comments = $comment_count . __(' <span>Comments</span>', 'hashone' );
+		$comments = $comment_count . __(' <span>评论</span>', 'hashone' );
 	} else {
-		$comments = __('1 <span>Comment</span>', 'hashone' );
+		$comments = __('1 <span>评论</span>', 'hashone' );
 	}
 	$comment_link = '<a href="' . get_comments_link() .'">'. $comments.'</a>';
 
@@ -52,23 +52,23 @@ function hashone_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'hashone' ) );
 		if ( $categories_list && hashone_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'hashone' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			printf( '<span class="cat-links">' . esc_html__( '发布在 %1$s', 'hashone' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'hashone' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'hashone' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="tags-links">' . esc_html__( '标签 %1$s', 'hashone' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( esc_html__( 'Leave a comment', 'hashone' ), esc_html__( '1 Comment', 'hashone' ), esc_html__( '% Comments', 'hashone' ) );
+		comments_popup_link( esc_html__( '评论', 'hashone' ), esc_html__( '1 评论', 'hashone' ), esc_html__( '% 评论', 'hashone' ) );
 		echo '</span>';
 	}
 
-	edit_post_link( esc_html__( 'Edit', 'hashone' ), '<span class="edit-link">', '</span>' );
+	edit_post_link( esc_html__( '编辑', 'hashone' ), '<span class="edit-link">', '</span>' );
 }
 endif;
 

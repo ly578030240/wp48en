@@ -16,7 +16,7 @@ get_header(); ?>
 
 
 <div class="hs-container">
-	<div class="oops-text"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'hashone' ); ?></div>
+	<div class="oops-text"><?php esc_html_e( '阿偶！找不到页面啦', 'hashone' ); ?></div>
 	<span class="error-404">404</span>
 </div>
 

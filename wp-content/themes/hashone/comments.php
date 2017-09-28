@@ -23,7 +23,7 @@ if ( post_password_required() ) {
 		<h3 class="comments-title">
 			<?php
 				printf( // WPCS: XSS OK.
-					esc_html( _nx( 'One Comment', '%1$s Comments', get_comments_number(), 'comments title', 'hashone' ) ),
+					esc_html( _nx( '一条评论', '%1$s 评论', get_comments_number(), '评论标题', 'hashone' ) ),
 					number_format_i18n( get_comments_number() )
 				);
 			?>
@@ -33,8 +33,8 @@ if ( post_password_required() ) {
 		<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
 			<div class="nav-links">
 
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'hashone' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'hashone' ) ); ?></div>
+				<div class="nav-previous"><?php previous_comments_link( esc_html__( '较早的评论', 'hashone' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( esc_html__( '新评论', 'hashone' ) ); ?></div>
 
 			</div><!-- .nav-links -->
 		</nav><!-- #comment-nav-above -->
@@ -54,7 +54,7 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'hashone' ); ?></p>
+		<p class="no-comments"><?php esc_html_e( '评论功能已关闭', 'hashone' ); ?></p>
 	<?php endif; ?>
 
 	<?php 
@@ -65,21 +65,21 @@ if ( post_password_required() ) {
 	$fields =  array(
 			'author' =>
 			    '<div class="author-email-url hs-clearfix"><p class="comment-form-author"><input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-			    '" size="30"' . $aria_req . ' placeholder="'. esc_attr__( 'Name', 'hashone' ).( $req ? '*' : '' ) .'" /></p>',
+			    '" size="30"' . $aria_req . ' placeholder="'. esc_attr__( '姓名', 'hashone' ).( $req ? '*' : '' ) .'" /></p>',
 
 			'email' =>
 			    '<p class="comment-form-email"><input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
-			    '" size="30"' . $aria_req . ' placeholder="'. esc_attr__( 'Email', 'hashone' ).( $req ? '*' : '' ) .'" /></p>',
+			    '" size="30"' . $aria_req . ' placeholder="'. esc_attr__( '邮箱', 'hashone' ).( $req ? '*' : '' ) .'" /></p>',
 
 			'url' =>
 			    '<p class="comment-form-url"><input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
-			    '" size="30" placeholder="'. esc_attr__( 'Website', 'hashone' ). '" /></p></div>',
+			    '" size="30" placeholder="'. esc_attr__( '网址', 'hashone' ). '" /></p></div>',
 			);
 
 
 	$args = array(
 	  'fields' => apply_filters( 'comment_form_default_fields', $fields ),
-	  'comment_field' =>  '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="'. esc_attr__( 'Comment', 'hashone' ) .'">' .
+	  'comment_field' =>  '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="'. esc_attr__( '评论', 'hashone' ) .'">' .
 	    '</textarea></p>',
 	);
 	?>

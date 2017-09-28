@@ -10,14 +10,14 @@ if ( ! function_exists( 'hashone_breadcrumbs' ) ) :
 function hashone_breadcrumbs() {
 
 	/* === OPTIONS === */
-	$text['home']     = __('Home','hashone'); // text for the 'Home' link
+	$text['home']     = __('首页','hashone'); // text for the 'Home' link
 	$text['category'] = "%s"; // text for a category page
-	$text['search']   = __('Search Results for "%s" Query','hashone'); // text for a search results page
+	$text['search']   = __(' "%s" 的查询结果','hashone'); // text for a search results page
 	$text['tag']      = "%s"; // text for a tag page
-	$text['author']   = __('Articles Posted by %s','hashone'); // text for an author page
-	$text['404']      = __('Error 404','hashone'); // text for the 404 page
-	$text['page']     = __('Page %s','hashone'); // text 'Page N'
-	$text['cpage']    = __('Comment Page %s','hashone'); // text 'Comment Page N'
+	$text['author']   = __('作者 %s','hashone'); // text for an author page
+	$text['404']      = __('错误 404','hashone'); // text for the 404 page
+	$text['page']     = __('页面 %s','hashone'); // text 'Page N'
+	$text['cpage']    = __('评论页 %s','hashone'); // text 'Comment Page N'
 
 	$wrap_before    = '<div class="hs-breadcrumbs">'; // the opening wrapper tag
 	$wrap_after     = '</div><!-- .hs-breadcrumbs -->'; // the closing wrapper tag
